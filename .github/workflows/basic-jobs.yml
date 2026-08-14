@@ -1,0 +1,29 @@
+Name : Basic JObs Demo
+
+on :
+  workflow_dispatch:
+  push:
+    branches: [mamin]
+
+jobs:
+  echo-vars-and-secrets:
+    name: 1- Echo Variables and Secerts
+    runs-on: ubuntu-latest
+    environment: development
+    env:
+      MY_VARIABLE: ${{vars.MY_VARIABLE}}
+      MY_SECRET: ${secerts.MY_SECRET}
+    strps:
+      - name: Echo repository Variable
+        run: echo "MY_VARIABLE = $MY_VARIABLE"
+
+      - name: Echo repository secert (Value is maskes as *** in the logs)
+        run: echo "MY_SECRET =$MY_SECRET"
+
+  # run-shell-script: 
+  #   name: 2 - Use shell script with Vars and Secerts
+  #   runs-on: ubuntu-latest
+  #   needs: echo-vars-and-secrets
+  #   environment: development
+  #   env:
+  #     MY_VARIABLE: ${{vars.MY_VARIABLE}}
