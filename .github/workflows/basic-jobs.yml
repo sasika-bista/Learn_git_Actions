@@ -1,4 +1,4 @@
-Name : Basic JObs Demo
+name : Basic JObs Demo
 
 on :
   workflow_dispatch:
