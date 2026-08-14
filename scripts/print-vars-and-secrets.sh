@@ -1,5 +1,5 @@
 #!/bin/bash
-set -euo piepfail
+set -euo pipefail
 
 echo "Running inside scripts"
 echo "MY_VARIABLE = $MY_VARIBALE"
