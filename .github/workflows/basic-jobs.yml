@@ -3,7 +3,7 @@ Name : Basic JObs Demo
 on :
   workflow_dispatch:
   push:
-    branches: [mamin]
+    branches: [main]
 
 jobs:
   echo-vars-and-secrets:
