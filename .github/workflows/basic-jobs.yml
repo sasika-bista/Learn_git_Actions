@@ -12,7 +12,7 @@ jobs:
     environment: development
     env:
       MY_VARIABLE: ${{vars.MY_VARIABLE}}
-      MY_SECRET: ${secerts.MY_SECRET}
+      MY_SECRET: ${secrets.MY_SECRET}
     strps:
       - name: Echo repository Variable
         run: echo "MY_VARIABLE = $MY_VARIABLE"
